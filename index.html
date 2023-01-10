@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <img id="bg-sidebar-mobile" src="./assets/images/bg-sidebar-mobile.svg" alt="bg-sidebar-mobile">
+  <!-- Sidebar start -->
+
+  <div style="display:none">
+
+    Step 1
+    Your info
+
+    Step 2
+    Select plan
+
+    Step 3
+    Add-ons
+
+    Step 4
+    Summary
+
+    <!-- Sidebar end -->
+
+    <!-- Step 1 start -->
+
+    Personal info
+    Please provide your name, email address, and phone number.
+
+    Name
+    e.g. Stephen King
+
+    Email Address
+    e.g. stephenking@lorem.com
+
+    Phone Number
+    e.g. +1 234 567 890
+
+    Next Step
+
+    <!-- Step 1 end -->
+
+    <!-- Step 2 start -->
+
+    Select your plan
+    You have the option of monthly or yearly billing.
+
+    Arcade
+    $9/mo
+
+    Advanced
+    $12/mo
+
+    Pro
+    $15/mo
+
+    Monthly
+    Yearly
+
+    Go Back
+    Next Step
+
+    <!-- Step 2 end -->
+
+    <!-- Step 3 start -->
+
+    Pick add-ons
+    Add-ons help enhance your gaming experience.
+
+    Online service
+    Access to multiplayer games
+    +$1/mo
+
+    Larger storage
+    Extra 1TB of cloud save
+    +$2/mo
+
+    Customizable Profile
+    Custom theme on your profile
+    +$2/mo
+
+    Go Back
+    Next Step
+
+    <!-- Step 3 end -->
+
+    <!-- Step 4 start -->
+
+    Finishing up
+    Double-check everything looks OK before confirming.
+
+    <!-- Dynamically add subscription and add-on selections here -->
+
+    Total (per month/year)
+
+    Go Back
+    Confirm
+
+    <!-- Step 4 end -->
+
+    <!-- Step 5 start -->
+
+    Thank you!
+
+    Thanks for confirming your subscription! We hope you have fun
+    using our platform. If you ever need support, please feel free
+    to email us at support@loremgaming.com.
+
+    <!-- Step 5 end -->
+  </div>
+
+  <div id="page-indicator">
+    <div class="page-mark">1</div>
+    <div class="page-mark">2</div>
+    <div class="page-mark">3</div>
+    <div class="page-mark">4</div>
+  </div>
+
+  <div id="step-1" class="form-content hidden">
+    <div class="title">Personal info</div>
+    <div class="description">Please provide your name, email address, and phone number.</div>
+    <div class="label">Name</div>
+    <div class="input-container">
+      <input id="name-input" type="text" placeholder="e.g. Stephen King">
+    </div>
+    <div class="label">Email Address</div>
+    <div class="input-container">
+      <input id="email-input" type="text" placeholder="e.g. stephenking@lorem.com">
+    </div>
+    <div class="label">Phone Number</div>
+    <div class="input-container">
+      <input id="phone-input" type="text" placeholder="e.g. + 1 234 567 890">
+    </div>
+  </div>
+
+  <div id="step-2" class="form-content hidden">
+    <div class="title">Select Your Plan</div>
+    <div class="description">You have the option of monthly or yearly billing.</div>
+    <div class="selectable-container plan-container" data-plan="Arcade">
+      <img src="./assets/images/icon-arcade.svg" alt="icon-arcade">
+      <div>
+        <div class="plan-label">Arcade</div>
+        <div class="plan-price">$9/mo</div>
+      </div>
+    </div>
+    <div class="selectable-container plan-container" data-plan="Advanced">
+      <img src="./assets/images/icon-advanced.svg" alt="icon-advanced">
+      <div>
+        <div class="plan-label">Advanced</div>
+        <div class="plan-price">$12/mo</div>
+      </div>
+    </div>
+    <div class="selectable-container plan-container" data-plan="Pro">
+      <img src="./assets/images/icon-pro.svg" alt="icon-pro">
+      <div>
+        <div class="plan-label">Pro</div>
+        <div class="plan-price">$15/mo</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="step-3" class="form-content hidden">
+    <div class="title">Pick add-ons</div>
+    <div class="description">Add-ons help enhance your gaming experience.</div>
+    <div class="selectable-container addon-container">
+      <img class="checkbox" src="./assets/images/icon-checkmark.svg" data-addon="online-service"></img>
+      <div>
+        <div class="addon-label">Online service</div>
+        <div class="addon-desc">Access to multiplayer games</div>
+      </div>
+      <div class="addon-price">+$1/mo</div>
+    </div>
+    <div class="selectable-container addon-container">
+      <img class="checkbox" src="./assets/images/icon-checkmark.svg" data-addon="larger-storage"></img>
+      <div>
+        <div class="addon-label">Larger storage</div>
+        <div class="addon-desc">Extra 1TB of cloud save</div>
+      </div>
+      <div class="addon-price">+$2/mo</div>
+    </div>
+    <div class="selectable-container addon-container">
+      <img class="checkbox" src="./assets/images/icon-checkmark.svg" data-addon="customizable-profile"></img>
+      <div>
+        <div class="addon-label">Customizable Profile</div>
+        <div class="addon-desc">Custom theme on your profile</div>
+      </div>
+      <div class="addon-price">+$2/mo</div>
+    </div>
+  </div>
+
+  <div id="step-4" class="form-content hidden">
+    <div class="title">Finishing Up</div>
+    <div class="description">Double-check everything looks OK before confirming.</div>
+    <div id="summary-container">
+      <div class="row-1">
+        <div>
+          <div class="summary-label">Arcade(Monthly)</div>
+          <div id="change">Change</div>
+        </div>
+        <div class="price">$9/mo</div>
+      </div>
+      <div class="separator"></div>
+      <div class="addon-item">
+        <div class="item">Online Service</div>
+        <div class="price">+1/mo</div>
+      </div>
+      <div class="addon-item">
+        <div class="item">Larger Storage</div>
+        <div class="price">+2/mo</div>
+      </div>
+    </div>
+
+    <div id="total-container">
+      <div id="total-label">Total (per month)</div>
+      <div id="total-price">+12/mo</div>
+    </div>
+  </div>
+
+  <div id="step-5" class="form-content hidden">
+    <div class="container">
+      <img src="./assets/images/icon-thank-you.svg" alt="thank-you">
+      <div class="title">Thank You!</div>
+      <div class="thank-you-message">
+        Thanks for confirming your subscription! We hope you have fun
+        using our platform. If you ever need support, please feel free
+        to email us at support@loremgaming.com.
+      </div>
+
+    </div>
+  </div>
+  <div class="navigation">
+    <div class="back-button">
+      Go Back
+    </div>
+    <div class="next-button">
+      Next Step
+    </div>
+  </div>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Kenny Chu</a>.
+  </div> -->
+  <script src="script.js"></script>
+</body>
+
+
+</html>

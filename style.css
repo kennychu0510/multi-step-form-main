@@ -1,0 +1,294 @@
+body {
+  font-family: 'Ubuntu-Regular';
+  margin: 0;
+  font-size: 16px;
+  background-color: var(--LightGray);
+}
+
+.form-content {
+  background-color: var(--White);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  margin-top: -75px;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-family: 'Ubuntu-Bold';
+  color: var(--MarineBlue);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: var(--CoolGray);
+  line-height: 24px;
+}
+
+.label {
+  color: var(--MarineBlue);
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  letter-spacing: -1px;
+}
+
+.input-container {
+  display: flex;
+}
+
+#step-1 input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  color: var(--CoolGray);
+  font-family: 'Ubuntu-Medium';
+  border-color: var(--LightGray);
+  border-width: 1px;
+  border-radius: 5px;
+  border-style: solid;
+}
+
+#step-1 input:focus {
+  outline-color: var(--MarineBlue);
+}
+
+input::placeholder {
+  color: var(--CoolGray);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 5px;
+  width: 100%
+}
+
+.navigation {
+  background-color: var(--White);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  position: absolute;
+  bottom: 0px;
+}
+
+.navigation div {
+  margin: 20px;
+}
+
+.next-button {
+  padding: 10px 15px;
+  background-color: var(--Purplish);
+  color: var(--White);
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Ubuntu-Regular';
+}
+
+#page-indicator {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page-mark {
+  margin: 20px 10px;
+  border-radius: 100px;
+  border-width: 1px;
+  border-color: var(--White);
+  border-style: solid;
+  height: 30px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--White);
+  font-size: 14px;
+  font-family: 'Ubuntu-Bold';
+}
+
+.current-page {
+  background-color: var(--LightBlue);
+  color: var(--MarineBlue);
+  border-color: var(--LightBlue);
+}
+
+.back-button {
+  color: var(--CoolGray);
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.selectable-container {
+  border-width: 1px;
+  border-color: var(--LightGray);
+  border-style: solid;
+  background-color: var(--White);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.plan-container img {
+  margin: 5px;
+  margin-right: 10px;
+}
+
+.plan-label {
+  color: var(--MarineBlue);
+  font-family: 'Ubuntu-Bold';
+  margin-bottom: 5px;
+}
+
+#step-2 img {
+  margin: 0 10px;
+  margin-right: 20px;
+}
+
+.plan-price {
+  color: var(--CoolGray);
+  font-size: 14px;
+}
+
+.selected {
+  border-color: var(--Purplish);
+  background-color: var(--Magnolia);
+}
+
+.addon-container div:nth-child(2){
+  flex-grow: 1;
+}
+
+.addon-label {
+  margin-bottom: 5px;
+  color: var(--MarineBlue);
+  font-family: 'Ubuntu-Bold';
+}
+
+.addon-desc {
+  color: var(--CoolGray);
+  font-size: 12px;
+}
+
+.addon-price {
+  color: var(--Purplish);
+  font-size: 12px;
+}
+
+.addon-container>:nth-child(1) {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.checkbox {
+  height: 13px;
+  aspect-ratio: 1;
+  border: 1px solid var(--CoolGray);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.checked {
+  background-color: var(--Purplish);
+  border: 1px solid var(--Purplish);
+}
+
+#summary-container {
+  margin-top: 10px;
+  background-color: var(--Magnolia);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#summary-container .row-1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+#change {
+  color: var(--CoolGray);
+  text-decoration: underline;
+}
+
+.summary-label {
+  color: var(--MarineBlue);
+  font-family: 'Ubuntu-Medium';
+  margin-bottom: 3px;
+}
+
+#summary-container .row-1 .price {
+  color: var(--MarineBlue);
+  font-family: 'Ubuntu-Medium';
+}
+
+.separator {
+  margin: 10px 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--CoolGray);
+}
+
+#summary-container .addon-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.item {
+  color: var(--CoolGray);
+}
+
+#total-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-top: 20px;
+}
+
+#total-label {
+  color: var(--CoolGray);
+}
+
+#total-price {
+  color: var(--Purplish);
+  font-family: 'Ubuntu-Bold';
+}
+
+#step-5 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#step-5 img {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  height: 50px;
+  aspect-ratio: 1;
+}
+
+.thank-you-message{
+  color: var(--CoolGray);
+  text-align: center;
+  margin: 0 10px;
+  margin-bottom: 30px;
+}
